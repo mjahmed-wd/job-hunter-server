@@ -136,6 +136,7 @@ client.connect((err) => {
       res.json(result.insertedCount);
     });
   });
+  
   // check if already applied for this post
 
   app.get("/checkDuplicateApply/:jobId/:email", (req, res) => {
