@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 // firebase
 const admin = require("firebase-admin");
-const serviceAccount = require(`./adminSDK.json`);
+const serviceAccount = require(`adminSDK.json`);
 // mongodb
 const ObjectId = require("mongodb").ObjectID;
 const port = 5000;
