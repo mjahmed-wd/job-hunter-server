@@ -36,45 +36,6 @@ client.connect((err) => {
   const applyCollection = client
     .db(process.env.DB_NAME)
     .collection(process.env.DB_APPLY_COLLECTION);
-  //   const propertyCollection = client
-  //     .db(process.env.DB_NAME)
-  //     .collection(process.env.DB_PROPERTY_COLLECTION);
-  //   const ordersCollection = client
-  //     .db(process.env.DB_NAME)
-  //     .collection(process.env.DB_ORDER_COLLECTION);
-  //   const reviewCollection = client
-  //     .db(process.env.DB_NAME)
-  //     .collection(process.env.DB_REVIEW_COLLECTION);
-  //   const adminCollection = client
-  //     .db(process.env.DB_NAME)
-  //     .collection(process.env.DB_ADMIN_COLLECTION);
-
-  // jwt token verify
-
-  //   const authCheck = (req, res,next) => {
-  //     const token = req.headers.authorization;
-  //     // console.log(token);
-  //     if (token) {
-  //       // console.log(token)
-  //       admin
-  //       .auth()
-  //       .verifyIdToken(token)
-  //       .then((decodedToken) => {
-  //         const uid = decodedToken.uid;
-  //         console.log(uid);
-  //         next()
-  //       })
-  //       .catch((error) => {
-  //         // Handle error
-  //         console.log(error)
-  //       });
-
-  //     }
-  //     // idToken comes from the client app
-  //     else {
-  //       res.status(401).json({ message: "Unauthorized Action" });
-  //     }
-  //   };
 
   app.post("/addUser", (req, res) => {
     const user = req.body;
