@@ -3,9 +3,6 @@ const app = express();
 require("dotenv").config();
 const bodyParser = require("body-parser");
 const cors = require("cors");
-// firebase
-const admin = require("firebase-admin");
-const serviceAccount = require(`./adminSDK.json`);
 // mongodb
 const ObjectId = require("mongodb").ObjectID;
 const port = 5000;
@@ -14,9 +11,6 @@ const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster
 
 app.use(bodyParser.json());
 app.use(cors());
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
